@@ -1,24 +1,13 @@
-#include <cassert>  // assert
-#include <iostream> // boolalpha, cout, endl
+#include <cassert>   // assert
+#include <iostream>  // boolalpha, cout, endl
+#include <memory>    // allocator
 
 using namespace std;
 
 int main () {
 
-	const char s[4] = "abc";
-
-	const char* r = &s[0];
-
-	const char* a = "abc";
-
-	char p = *a;
-	cout << p << endl;
-
-	cout << static_cast<void*>(&p) << endl;
-
-	const int ci = 2;
-
-	const int* q = &ci;
-
+    allocator<double> x;
+    double* q = x.allocate(123456789012345LL);
+    cout << q << endl;
 
     return 0;}

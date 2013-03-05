@@ -31,6 +31,9 @@ T A<T>::v1 = v0 + 1;
 template <typename T>
 const T A<T>::cv0 = T();
 
+//template <typename T>
+//const int A<T>::cv1 = cv0 + 1; // error: duplicate initialization of ‘A<T>::cv1’
+
 template <typename T>
 const int A<T>::cv1;
 

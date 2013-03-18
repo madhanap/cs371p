@@ -6,7 +6,7 @@
 #include <iostream>  // cout, endl
 #include <memory>    // allocator
 
-#include "Memory.h"  // my_destroy, my_uninitialized_copy, my_uninitialized_fill
+#include "Memory.h"  // my_destroy, my_uninitialized_fill
 
 template <typename T, typename A = std::allocator<T> >
 class my_vector {

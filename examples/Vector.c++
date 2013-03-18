@@ -30,9 +30,17 @@ int main () {
     using namespace std;
     cout << "Vector.c++" << endl;
 
+    {
     my_vector<int> x;
     my_vector<int> y(10);
     my_vector<int> z(10, 2);
+    }
+
+    {
+    my_vector<int, allocator<int> > x;
+    my_vector<int, allocator<int> > y(10);
+    my_vector<int, allocator<int> > z(10, 2);
+    }
 
     cout << "Done." << endl;
     return 0;}

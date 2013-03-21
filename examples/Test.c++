@@ -1,13 +1,11 @@
-#include <cassert>   // assert
-#include <iostream>  // boolalpha, cout, endl
-#include <memory>    // allocator
+#include <iostream> // cout, endl
 
 using namespace std;
 
 int main () {
 
-    allocator<double> x;
-    double* q = x.allocate(123456789012345LL);
-    cout << q << endl;
+    int i = 16;
+    i >>= 3;
+    cout << i << endl;
 
     return 0;}

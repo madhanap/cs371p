@@ -28,7 +28,7 @@ gcc version 4.4.3 (Ubuntu 4.4.3-4ubuntu5.1)
 */
 
 /*
-% g++ Hello.c++ -o Hello.c++.appx -pedantic -std=c++0x -Wall
+% g++ -pedantic -std=c++0x -Wall Hello.c++ -o Hello.c++.appx
 % Hello.c++.appx
 Nothing to be done.
 */

@@ -93,7 +93,6 @@ int main () {
 
     try {
         cout << "*** Darwin 8x8 ***" << endl;
-        srand(0);
         /*
         8x8 Darwin
         Food,   facing east,  at (0, 0)

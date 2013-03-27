@@ -21,7 +21,7 @@ inline bool operator != (const T& lhs, const T& rhs) {
 template <typename T>
 class My_Complex {
     friend bool operator == (const My_Complex& lhs, const My_Complex& rhs) {
-        return (lhs._r == rhs._r) && (rhs._i == rhs._i);}
+        return (lhs._r == rhs._r) && (lhs._i == rhs._i);}
 
     private:
         T _r;

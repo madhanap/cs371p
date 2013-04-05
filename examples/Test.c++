@@ -1,25 +1,48 @@
 #include <iostream> // cout, endl
 
-using namespace std;
+struct A {
+    char c1;
+    int  i;
+    char c2;
+    char c3;};
 
-int main()
-{
+struct B : A {
+    char c4;};
 
-int i =2;
-const int ci = 3;
-const int* pc = &ci;
+int main () {
+    using namespace std;
+    cout << "Test.c++" << endl;
 
-int *p = const_cast <int*> (pc);
+    cout << sizeof(char) << endl;
+    cout << sizeof(int)  << endl;
+    cout << sizeof(A)    << endl;
+    cout << sizeof(B)    << endl;
 
-*p = 4;
+    cout << "Done." << endl;
+    return 0;}
 
+/*
+% g++ -v
+gcc version 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2336.11.00)
 
-cout << " ci value is " << ci << endl;
-cout << "*pc value is " << *pc << endl;
-cout << "*p value is " << *p << endl;
+% g++ -pedantic -std=c++98 -Wall Test.c++ -o Test.c++.appx
+% Test.c++.appx
+Test.c++
+1
+4
+8
+12
+Done.
 
-cout << "&ci value is " << &ci << endl;
-cout << "p value is " << p << endl;
-cout << "pc value is " << pc << endl;
+% clang++ -v
+Apple LLVM version 4.2 (clang-425.0.24) (based on LLVM 3.2svn)
 
-}
+% clang++ -pedantic -std=c++11 -Wall -Wno-sizeof-array-argument Test.c++ -o Test.c++.appy
+% Test.c++.appy
+Test.c++
+1
+4
+8
+12
+Done.
+*/

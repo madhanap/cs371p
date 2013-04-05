@@ -12,7 +12,8 @@ multiple inheritance
 */
 
 /* -----------------------------------------------------------------------
-2. Define operators !=, <=, >, and >= in terms of == and <.
+2. Define operator != only in terms of ! and ==.
+   Define the operators <=, >, and >= only in terms of ! and <.
    (2 pts)
 */
 

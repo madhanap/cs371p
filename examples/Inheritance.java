@@ -39,10 +39,9 @@ class Circle extends Shape {
         return 3.14 * _r * _r;}
 
     public boolean equals (Object rhs) {
-        if (!(rhs instanceof Circle))
-            return false;
-        Circle that = (Circle) rhs;
-        return super.equals(rhs) && (_r == that._r);}
+        if (rhs instanceof Circle)
+            return super.equals(rhs) && (_r == ((Circle) rhs)._r);
+        return false;}
 
     public int radius () {
         return _r;}

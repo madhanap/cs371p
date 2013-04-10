@@ -26,7 +26,7 @@ Circle (int x, int y, int r) :
     _r = r;}
 
 /* -----------------------------------------------------------------------
-2. Define Circle::equals(...) in terms of Shape.equals(...).
+2. Define Circle::equals(...) in terms of Shape::equals(...).
    (2 pts)
 */
 

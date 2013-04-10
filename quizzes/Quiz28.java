@@ -5,6 +5,8 @@ CS371p: Quiz #28 (5 pts)
 class Shape {
     private int _x;
     private int _y;
+
+    public ... equals (...) {...}
     ...}
 
 class Circle extends Shape {
@@ -12,7 +14,7 @@ class Circle extends Shape {
     ...}
 
 /* -----------------------------------------------------------------------
-1. Define the Circle.Circle() in terms of Shape.Shape().
+1. Define Circle.Circle(...) in terms of Shape.Shape(...).
    (2 pts)
 */
 
@@ -21,7 +23,7 @@ public Circle (int x, int y, int r) {
     _r = r;}
 
 /* -----------------------------------------------------------------------
-2. Define the Circle.equals() in terms of Shape.equals().
+2. Define Circle.equals(...) in terms of Shape.equals(...).
    (2 pts)
 */
 

@@ -13,8 +13,8 @@ doc:
 log:
 	git log > Life.log
 
-RunLife: AbstractCell.h AbstractCell.c++ ConwayCell.h Life.h Life.c++ RunLife.c++
-	g++ -pedantic -std=c++0x -Wall Life.c++ RunLife.c++ -o RunLife
+RunLife: AbstractCell.c++ AbstractCell.h Cell.h ConwayCell.c++ ConwayCell.h FredkinCell.c++ FredkinCell.h Handle.h Life.h RunLife.c++
+	g++ -pedantic -std=c++0x -Wall AbstractCell.c++ ConwayCellc++ FredkinCell.c++ Life.c++ RunLife.c++ -o RunLife
 
 run: RunLife
 	RunLife
@@ -22,8 +22,8 @@ run: RunLife
 runv: RunLife
 	valgrind RunLife
 
-TestLife: Life.h Life.c++ TestLife.c++
-	g++ -pedantic -std=c++0x -Wall Life.c++ TestLife.c++ -o TestLife -lcppunit -ldl
+TestLife: AbstractCell.c++ AbstractCell.h Cell.h ConwayCell.c++ ConwayCell.h FredkinCell.c++ FredkinCell.h Handle.h Life.h TestLife.c++
+	g++ -pedantic -std=c++0x -Wall AbstractCell.c++ ConwayCellc++ FredkinCell.c++ Life.c++ TestLife.c++ -o TestLife -lcppunit -ldl
 
 test: TestLife
 	TestLife

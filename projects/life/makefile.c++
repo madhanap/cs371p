@@ -1,0 +1,60 @@
+all:
+	make run
+	make test
+
+diff: RunLife
+	RunLife < RunCollatz.in > RunLife.tmp
+	diff RunLife.out RunLife.tmp
+	rm RunLife.tmp
+
+doc:
+	doxygen Doxyfile
+
+log:
+	git log > Life.log
+
+RunLife: AbstractCell.h AbstractCell.c++ ConwayCell.h Life.h Life.c++ RunLife.c++
+	g++ -pedantic -std=c++0x -Wall Life.c++ RunLife.c++ -o RunLife
+
+run: RunLife
+	RunLife
+
+runv: RunLife
+	valgrind RunLife
+
+TestLife: Life.h Life.c++ TestLife.c++
+	g++ -pedantic -std=c++0x -Wall Life.c++ TestLife.c++ -o TestLife -lcppunit -ldl
+
+test: TestLife
+	TestLife
+
+testv: TestLife
+	valgrind TestLife
+
+turnin-list:
+	turnin --list reza cs371ppj5
+
+turnin-submit:
+	turnin --submit reza cs371ppj5 Life.zip
+
+turnin-verify:
+	turnin --verify reza cs371ppj5
+
+zip:
+	zip -r Life.zip html/ makefile       \
+	AbstractCell.c++    AbstractCell.h   \
+	Cell.h                               \
+	ConwayCell.c++      ConwayCell.h     \
+	FredkinCell.c++     FredkinCell.h    \
+	Handle.h                             \
+	Life.h Life.log Life.pdf             \
+	RunLife.c++                          \
+	RunLife.in        RunLife.out        \
+	RunLifeConway.in  RunLifeConway.out  \
+	RunLifeFredkin.in RunLifeFredkin.out \
+	TestLife.c++      TestLife.out
+
+clean:
+	rm -f RunLife
+	rm -f TestLife
+	rm -f *.tmp

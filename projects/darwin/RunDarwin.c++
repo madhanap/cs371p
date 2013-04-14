@@ -152,7 +152,8 @@ int main () {
         10 Rover
         10 Trap
         Simulate 1000 moves.
-        Print every 100th grid.
+        Print the first 10 grids          (i.e. 0, 1, 2...9).
+        Print every 100th grid after that (i.e. 100, 200, 300...1000).
         */
         }
     catch (const invalid_argument&) {
@@ -182,7 +183,8 @@ int main () {
         10 Best
         Simulate 1000 moves.
         Best MUST outnumber ALL other species for the bonus pts.
-        Print every 100th grid.
+        Print the first 10 grids          (i.e. 0, 1, 2...9).
+        Print every 100th grid after that (i.e. 100, 200, 300...1000).
         */
         }
     catch (const invalid_argument&) {

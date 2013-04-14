@@ -84,7 +84,7 @@ int main () {
     try {
         cout << "*** Life<Cell> 20x20 ***" << endl;
         /*
-        read RunLife.in // assume all Fredkin cells
+        read RunLifeCell.in // assume all Fredkin cells
         Simulate 5 moves.
         Print every grid (i.e. 0, 1, 2...5)
         */

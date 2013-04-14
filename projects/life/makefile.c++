@@ -41,18 +41,17 @@ turnin-verify:
 	turnin --verify reza cs371ppj5
 
 zip:
-	zip -r Life.zip html/ makefile       \
-	AbstractCell.c++    AbstractCell.h   \
-	Cell.h                               \
-	ConwayCell.c++      ConwayCell.h     \
-	FredkinCell.c++     FredkinCell.h    \
-	Handle.h                             \
-	Life.h Life.log Life.pdf             \
-	RunLife.c++                          \
-	RunLife.in        RunLife.out        \
-	RunLifeConway.in  RunLifeConway.out  \
-	RunLifeFredkin.in RunLifeFredkin.out \
-	TestLife.c++      TestLife.out
+	zip -r Life.zip html/ makefile     \
+	AbstractCell.c++ AbstractCell.h    \
+	Cell.h                             \
+	ConwayCell.c++ ConwayCell.h        \
+	FredkinCell.c++ FredkinCell.h      \
+	Handle.h                           \
+	Life.h Life.log Life.pdf           \
+	RunLife.c++ RunLife.out            \
+	RunLifeCell.in                     \
+	RunLifeConway.in RunLifeFredkin.in \
+	TestLife.c++ TestLife.out
 
 clean:
 	rm -f RunLife

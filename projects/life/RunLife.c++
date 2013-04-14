@@ -1,13 +1,13 @@
 // -------------------------
 // projects/life/RunLife.c++
-// Copyright (C) 2012
+// Copyright (C) 2013
 // Glenn P. Downing
 // -------------------------
 
 /*
 To run the program:
-    % g++ -pedantic -std=c++0x -Wall RunLife.c++ -o RunLife.c++.app
-    % valgrind RunLife.c++.app > RunLife.out
+    % make RunLife
+    % make run
 
 To configure Doxygen:
     doxygen -g
@@ -46,13 +46,13 @@ int main () {
         cout << "*** Life<ConwayCell> 109x69 ***" << endl;
         /*
         read RunLifeConway.in // assume all Conway cells
-        Print grid.
         Simulate 283 moves.
-        Print grid.
+        Print the first 10 grids (i.e. 0, 1, 2...9).
+        Print the 283rd grid.
         Simulate 40 moves.
-        Print grid.
-        Simulate 2500 moves.
-        Print grid.
+        Print the 323rd grid.
+        Simulate 2177 moves.
+        Print the 2500th grid.
         */
         }
     catch (const invalid_argument&) {
@@ -68,9 +68,8 @@ int main () {
         cout << "*** Life<FredkinCell> 20x20 ***" << endl;
         /*
         read RunLifeFredkin.in // assume all Fredkin cells
-        Print grid.
-        Simulate 2 moves.
-        Print every grid.
+        Simulate 5 moves.
+        Print every grid (i.e. 0, 1, 2...5)
         */
         }
     catch (const invalid_argument&) {
@@ -86,9 +85,8 @@ int main () {
         cout << "*** Life<Cell> 20x20 ***" << endl;
         /*
         read RunLife.in // assume all Fredkin cells
-        Print grid.
         Simulate 5 moves.
-        Print every grid.
+        Print every grid (i.e. 0, 1, 2...5)
         */
         }
     catch (const invalid_argument&) {

@@ -3,7 +3,7 @@ all:
 	make test
 
 diff: RunLife
-	RunLife < RunCollatz.in > RunLife.tmp
+	RunLife > RunLife.tmp
 	diff RunLife.out RunLife.tmp
 	rm RunLife.tmp
 

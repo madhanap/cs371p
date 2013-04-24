@@ -3,7 +3,7 @@ CS371p: Quiz #32 (5 pts)
 */
 
 /* -----------------------------------------------------------------------
-1. What constructors/destructors does the following invoke?
+1. What is the output of the following program?
    (4 pts)
 
 A() A(A) A(A) ~A()
